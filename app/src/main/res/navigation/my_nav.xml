@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/newMain">
+
+    <fragment
+        android:id="@+id/browseAPI"
+        android:name="com.example.wasan.Fragment.BrowseAPI"
+        android:label="fragment_browse_a_p_i"
+        tools:layout="@layout/fragment_browse_a_p_i" >
+        <action
+            android:id="@+id/action_browseAPI_to_newMain"
+            app:destination="@id/newMain" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/localDB"
+        android:name="com.example.wasan.Fragment.LocalDB"
+        android:label="fragment_local_d_b"
+        tools:layout="@layout/fragment_local_d_b" >
+        <action
+            android:id="@+id/action_localDB_to_newMain"
+            app:destination="@id/newMain" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newMain"
+        android:name="com.example.wasan.Fragment.NewMain"
+        android:label="fragment_new_main"
+        tools:layout="@layout/fragment_new_main" >
+        <action
+            android:id="@+id/action_newMain_to_browseAPI"
+            app:destination="@id/browseAPI" />
+        <action
+            android:id="@+id/action_newMain_to_localDB"
+            app:destination="@id/localDB" />
+    </fragment>
+
+</navigation>
+
